@@ -12,3 +12,7 @@ just make the right configuration  between Settings tags
 
 then run
     node app.js
+
+## Demo
+
+http://www.chatkapi.tk/
