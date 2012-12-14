@@ -1,0 +1,68 @@
+!!! 5
+html(lang="en")
+    head
+        title Wellcome to RoomChat 
+        meta(charset='utf-8')
+        meta(property='og:type', content='website')
+        meta(property='og:image', content='http://i49.tinypic.com/33w1v8p.jpg')
+        meta(property='og:site_name', content='ChatKapi.tk')
+        meta(property='og:url', content='http://www.chatkapi.tk')
+        meta(property='og:title', content='Wellcome to RoomChat')
+        meta(property='og:description', content='Wellcome to RoomChat')
+        script(type='text/javascript', src='/javascripts/jquery.js')
+        script(type='text/javascript', src='/javascripts/sound.js')
+        script(type='text/javascript', src='/javascripts/title.js')
+        script(type='text/javascript', src='/socket.io/socket.io.js')
+        script(type='text/javascript', src='/javascripts/smile.js')
+        link(href='/stylesheets/style.css', rel='stylesheet', type='text/css')
+        script(src='/javascripts/colorpicker.js', type='text/javascript')
+        link(href='/stylesheets/colorpicker.css', rel='stylesheet', type='text/css')     
+        
+        
+    body(style='background: url("/resim/arka.jpg") repeat scroll 0pt 0pt transparent;margin-top:-30px;margin-left:-40px;')
+        script(type='text/javascript', src='/javascripts/main.js')
+        div(id='isimGirisEkrani', style='background:url("/resim/girisarka.png");background-repeat:no-repeat;color:#000000;padding: 10px;width:450px;height:250px; margin-bottom: 10px; font-family: "Tahoma", Trebuchet MS, sans-serif; font-size: 14px;margin-top:140px;margin-left:240px;')
+            div(id='online',style='margin-top:20px;margin-left:30px;')
+               b Online Users : #{online}
+            div(id='form',style='margin-top:25px;margin-left:30px;')
+
+                b Your Nick : 
+                input(type='text', id='txtIsim', placeholder='Enter your nick here...')
+                br
+                br
+                b Select Room     :
+                select('id=oda')
+                    each oda, i in odalar
+                        option(value='#{i}') #{oda}
+                br
+                br
+
+                input(type='button', style='margin-left:220px;',id='btnBaglan', value='Enter Chat', onclick='$("#loading").show(); $("#btnBaglan").attr("disabled", "disabled");')
+                br
+                img(style='display:none',id='loading',alt='Loading',src='/resim/yukleniyor.gif')
+
+
+        div(id='chatBolumu', style='display:none;')
+            div(id='yazilar',style='font-size:14px;float:left;height: 510px;padding:10px;background-color: #98A942;color: white;margin: 0;font-family: "Tahoma", Trebuchet MS, sans-serif;background:url("/resim/sol.png");background-repeat:no-repeat;width:189px;margin-top:-15px;')
+                b(id='topkullan',style='display: block; text-align: center;margin-top:30px;color:black;') Users 0
+
+                div(id='kullanicilar', style='overflow: auto; height: 470px;margin-top:2px;margin-left:10px;')
+
+                    
+            div(style='float:left;width:456px;padding:5px;margin-left: 20px;word-wrap:break-word;background:url("/resim/orta.png");background-repeat:no-repeat;height:463px;margin-top:-15px;')
+                div(id='konusmaPenceresi', style='overflow: auto;height:300px;margin-left:15px;margin-top:120px;width:456px;')
+                input(id='mesaj', style='width:280px;margin-top:50px;height:40px;')
+                br
+                input(type='button', style='margin:6px;', id='mesajiYolla', value='Send')
+                input(type='button', id='temizle', value='Clean')
+                div(style='float: left; margin-right: 5px;')
+                    input(id='renk',type='hidden', value='000000', style='width: 0px;')
+                    div(style='color: white;') Color:
+                    div(id='colorSelector')
+                        div(style='background-color: #000000;')
+
+                div(style='color: white;')
+                    | Notifications : Sound Notification
+                    input(type='checkbox', id='seslibildirim', name='seslibildirim', checked='checked')
+                    | Title Notification
+                    input(type='checkbox', id='baslikbildirim', name='seslibildirim', checked='checked')

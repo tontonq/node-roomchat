@@ -1,0 +1,16 @@
+{
+    "name": "room-chat", 
+	"version": "1.0.0", 	
+	
+	"engines": {
+	"node": "*",
+	"npm":  "*"
+	},
+	
+	"dependencies": {
+      "express": "3.x.x",
+      "jade": ">= 0.27.x",
+      "socket.io": "0.x.x"
+  }
+  
+}
