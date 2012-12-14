@@ -8,5 +8,7 @@
 ## Usage & Info
 
 This project used Node.js , Socket.io , Express 3.0 , Jade
-just make the right configuration  between <Settings> </Settings>
-then run node app.js
+just make the right configuration  between Settings tags
+
+then run
+    node app.js
