@@ -1,9 +1,10 @@
 {
     "name": "room-chat", 
-	"version": "1.0.0", 	
-	
+	"version": "1.0.0",
+	"url": "https://github.com/tontonq/node-roomchat",
+	"author": "Tontonq",
 	"engines": {
-	"node": "*",
+	"node" : ">= 0.8.0",
 	"npm":  "*"
 	},
 	
