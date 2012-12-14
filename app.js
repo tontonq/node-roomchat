@@ -5,7 +5,7 @@ var express = require('express')
 
 
 // <Settings>
-var admins = {"admin":"admin","r10":"r10"};
+var admins = {"admin":"pass","root":"rootpass123"};
 var rooms = ["Public","Facebook","Love","18+","25+","40+","Islam","NodeJS","SocketIO","Expressjs","Private"];
 var privrooms = {"Private":{}};
 var onlinecounter=0; 
