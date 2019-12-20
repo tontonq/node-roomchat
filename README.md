@@ -15,4 +15,4 @@ then run
 
 ## Demo
 
-http://www.chatkapi.tk/
+https://cay.herokuapp.com/
